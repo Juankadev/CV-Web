@@ -1,0 +1,133 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    background-color: #e9e9eb;
+    display:grid;
+    grid-template-columns: 300px 400px 400px;
+    column-gap: 50px;
+    grid-template-areas:'foto nombre nombre'
+                        'foto linea linea'
+                        'foto resumen aptitudes'
+                        'contacto historial-personal historial-personal'
+                        'referido historial-academico historial-academico'
+}
+.foto {
+    grid-area: foto;
+}
+.nombre{
+    /*display: inline-block;*/
+    grid-area: nombre;
+}
+.linea{
+    grid-area: linea;
+}
+.historial.personal{
+    grid-area: historial-personal;
+}
+.resumen{
+    grid-area: resumen;
+}
+.aptitudes{
+    grid-area: aptitudes;
+}
+.historial.academico{
+    grid-area:historial-academico
+}
+.contacto{
+    grid-area: contacto;
+}
+.referido{
+    grid-area: referido;
+}
+
+/*********************/
+body>*{
+    border: 0px solid #000;
+    color: #e46a3a;
+}
+section.foto>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    transition: 0.01s;
+}
+section.foto>img:hover{
+    /*border: 8px double #000;*/
+}
+
+.nombre,.historial>h2,
+.aptitudes>h2, 
+.resumen>h2, h3{
+    color: #e46a3a;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nombre {
+    font-size: 2rem;
+}
+
+.linea {
+    /*background-color: #3A41E4;*/
+    background-color: #e46a3a;
+    height: 3px;
+}
+
+section.contacto, section.referido{
+    color: #fff;
+    background-color: #e46a3a;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+.historial-lista>li{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+.historial-lista>li>h3{
+}
+
+ul {
+    list-style:disc;
+}
+
+.contacto {
+    padding: 0 35px;
+}
+.referido {
+    padding: 0 35px;
+}
+a{
+    color: #fff;
+}
+
+/************************************/
+.contacto-item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.icono.location {
+    width: 30px;
+    height: 30px;
+}
+
+.icono.mail {
+    height: 30px;
+    width: 25px;
+}
+
+.icono.tel {
+    height: 20px;
+    width: 20px;
+}
+
+.icono.linkedin {
+    height: 30px;
+    width: 30px;
+}
