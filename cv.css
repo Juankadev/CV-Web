@@ -11,11 +11,13 @@ body{
                         'contacto historial-personal historial-personal'
                         'referido historial-academico historial-academico'
 }
+:root{
+    font-size: 18px;
+}
 .foto {
     grid-area: foto;
 }
 .nombre{
-    /*display: inline-block;*/
     grid-area: nombre;
 }
 .linea{
@@ -59,7 +61,7 @@ section.foto>img:hover{
 .nombre,.historial>h2,
 .aptitudes>h2, 
 .resumen>h2, h3{
-    color: #e46a3a;
+    /*color: #e46a3a;*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -68,7 +70,6 @@ section.foto>img:hover{
 }
 
 .linea {
-    /*background-color: #3A41E4;*/
     background-color: #e46a3a;
     height: 3px;
 }
@@ -82,19 +83,40 @@ h2{
     font-size: 1.8rem;
 }
 
+
+/*
 .historial-lista>li{
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-areas:'title title parraf'
+                        'fecha fecha parraf';
+}
+.historial-lista-title{
+    grid-area: title;
+}
+.historial-lista-fecha{
+    grid-area: fecha;
+}
+.historial-lista-parraf{
+    grid-area: parraf;
+}
+*/
+
+.historial-lista-fecha{
+    /*font-size: 1.2rem;*/
 }
 
-
-.historial-lista>li>h3{
+.historial-lista>li {
+    list-style:none;
 }
-
-ul {
+.historial-lista>li>ul {
     list-style:disc;
 }
+.historial-lista>li>ul, .academico .historial-lista>li{
+    margin-bottom: 35px;
+}
+
 
 .contacto {
     padding: 0 35px;
