@@ -1,339 +1,147 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    background-color: #e9e9eb;
-    display:grid;
-    grid-template-columns: 300px auto 400px;
-    column-gap: 50px;
-    grid-template-areas:'foto nombre nombre'
-                        'foto linea linea'
-                        'foto resumen aptitudes'
-                        'contacto historial-personal historial-personal'
-                        'referido historial-academico historial-academico'
-}
-:root{
-    font-size: 18px;
-}
-.foto {
-    grid-area: foto;
-}
-.nombre{
-    grid-area: nombre;
-}
-.linea{
-    grid-area: linea;
-}
-.historial.personal{
-    grid-area: historial-personal;
-}
-.resumen{
-    grid-area: resumen;
-}
-.aptitudes{
-    grid-area: aptitudes;
-}
-.historial.academico{
-    grid-area:historial-academico
-}
-.contacto{
-    grid-area: contacto;
-}
-.referido{
-    grid-area: referido;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Cruz Rey | CV</title>
+    <link rel="stylesheet" href="css/cv.css">
+    <link  rel="icon" href="img/cvLogo.ico" type="img/icon" />
+</head>
+<body>
 
-/*********************/
-body>*{
-    border: 0px solid #000;
-    color: #e46a3a;
-}
-.foto{
-    overflow: hidden;
-}
-section.foto>img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-    transition: 1s;
-}
-section.foto>img:hover{
-    /*border: 8px double #000;*/
-}
-img:hover{
-    transform: scale(1.1);
-}
+    <section class="foto">
+        <img src="img/juan_rey.jpg" alt="juan cruz rey">
+    </section>
 
+    <header class="nombre">
+        <h1>Juan Cruz Rey</h1>
+        <p>Estudiante de Programación</p>
+    </header>
 
+    <div class="linea"></div>
 
+    <section class="resumen">
+        <h2>Resumen Personal</h2>
+        <p>Estudiante de Programación con fuertes bases
+            de POO. De manera autodidacta incorporo
+            conocimientos diariamente, con el fin de
+            obtener mi primera oportunidad en el sector IT.</p>
+    </section>
 
-.nombre,.historial>h2,
-.aptitudes>h2, 
-.resumen>h2, h3{
-    /*color: #e46a3a;*/
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    <section class="aptitudes">
+        <h2>Tecnologías</h2>
+        <ul>
+            <li>HTML / CSS</li>
+            <li>C++</li>
+            <li>POO</li>
+            <li>GIT</li>
+        </ul>
+    </section>
 
-.nombre {
-    font-size: 2rem;
-}
-.nombre h1{
-    margin: 0;
-}
+    <section class="historial personal">
+        <h2>Historial Laboral</h2>
+        
+        <ul class="historial-lista">
+            <li>
+                <h3 class="historial-lista-title">Administrativo de Compras | Cortestamp S.A. </h3>
+                <p class="historial-lista-fecha fecha">08/21 - 11/21</p>
+                <ul class="historial-lista-parraf">
+                    <li>Busqueda de potenciales proveedores</li>
+                    <li>Carga de facturas</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur</li>
+                </ul>
+            </li>
 
-.nombre p{
-    margin: 0;
-}
+            <li>
+                <h3>Comprador | Nobles del Sur S.A.</h3>
+                <p class="fecha">07/20 - 08/21</p>
+                <ul>
+                    <li>Trabajé en conjunto con el jefe del área y logré relaciones
+                        comerciales que permitieron un abastecimiento continuo.
+                        Siempre me enfoqué en la mejora de costos y el estándar
+                        de calidad de la empresa.
+                    </li>
+                </ul>
+            </li>
 
-.linea {
-    background-color: #e46a3a;
-    height: 3px;
-}
+            <li>
+                <h3>Pasante de Sistemas (Voluntariado) | Hospital Dr. Erill</h3>
+                <p class="fecha">06/19 - 11/19</p>
+                <ul>
+                    <li>Instalación de PC e Impresoras</li>
+                    <li>Cableado de redes</li>
+                    <li>Configuración de sistemas de control de acceso</li>
+                </ul>
+            </li>
 
-section.contacto, section.referido{
-    color: #fff;
-    background-color: #e46a3a;
-}
+        </ul>
+    </section>
+    
+    <section class="historial academico">
+        <h2>Historial Academico</h2>
+        
+        <ul class="historial-lista">
+            <li>
+                <h3>Tecnicatura Superior en Programación | UTN FRGP</h3>
+                <p class="fecha">2019 - Actualidad</p>
+                <p>Cursando 2° Año (Ultimo año). Practicas en C++ y POO.</p>
+            </li>
+            <li>
+                <h3>Técnico en informática personal y profesional | EEST N°4</h3>
+                <p class="fecha">2013 - 2019</p>
+            </li>
+        </ul>
+    </section>
 
-h2{
-    font-size: 1.8rem;
-}
+    <section class="contacto">
+        <h2>Contacto</h2>
 
+        <div class="contacto-item">
+            <img src="location_icon-icons.com_50109.png" alt="" class="icono location">
+            <p>Garin, Buenos Aires</p>
+        </div>
 
+        <div class="contacto-item">
+            <img src="Email-Icon-Png-Transparent.png" alt="" class="icono mail">
+            <p>juancruzrey1@hotmail.com</p>
+        </div>
 
-/*
-.historial-lista>li{
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-areas:'title title parraf'
-                        'fecha fecha parraf';
-}
-.historial-lista-title{
-    grid-area: title;
-}
-.historial-lista-fecha{
-    grid-area: fecha;
-}
-.historial-lista-parraf{
-    grid-area: parraf;
-}
-*/
+        <div class="contacto-item">
+            <img src="img_344675.png" alt="" class="icono tel">
+            <p>+54 11 22811226</p>
+        </div>
 
-.historial-lista-fecha{
-    /*font-size: 1.2rem;*/
-}
+        <div class="contacto-item">
+            <img src="/img/img_344675.png" alt="" class="icono tel">
+            <p>(011) 75427570</p>
+        </div>
 
-.historial-lista>li {
-    list-style:none;
-}
-.historial-lista>li>ul {
-    list-style:disc;
-}
-.historial-lista>li>ul, .academico .historial-lista>li{
-    margin-bottom: 35px;
-}
+        <div class="contacto-item">
+            <img src="linkedin_black_logo_icon_147114.png" alt="" class="icono linkedin">
+            <a href="https://www.linkedin.com/in/juan-cruz-rey/" target="_blank">LinkedIn</a>
+        </div>
+        
+    </section>
 
+    <section class="referido">
+        <h2>Referencias</h2>
 
-.contacto {
-    padding: 0 35px;
-}
-.referido {
-    padding: 0 35px;
-    margin-top: -200px;
-}
-a{
-    color: #fff;
-}
+        <p>Ricardo Tessi</p>
+        <ul>
+            <li>Tel: +54 11 3218 0383</li>
+            <li>Puesto: Encargado de Sistemas</li>
+            <li>Empresa: Hospital Erill</li>
+        </ul>
 
-/************************************/
-.contacto-item {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    transition: 0.5s;
-}
+        <p>Walter Pinto</p>
+        <ul>
+            <li>Tel: +54 11 6266-3578</li>
+            <li>Puesto: Jefe de Compras</li>
+            <li>Empresa: Nobles del Sur S.A.</li>
+        </ul>
 
-.contacto-item>img{
-    transition: 0.4s;
-}
-.contacto-item>img:hover{
-    transform: rotate(360deg) scale(1.3);
-}
-
-.icono.location {
-    width: 30px;
-    height: 30px;
-}
-
-.icono.mail {
-    height: 30px;
-    width: 25px;
-}
-
-.icono.tel {
-    height: 20px;
-    width: 20px;
-}
-
-.icono.linkedin {
-    height: 30px;
-    width: 30px;
-}
-
-
-.historial-lista>li,
-.aptitudes>ul,
-p{
-    position: relative;
-    transition: 1s;
-    /*opacity: 0.85;*/
-    left: 0;
-}
-.historial-lista>li:hover{
-    /*color: rgb(0, 0, 0);*/
-    /*text-shadow: 0px 0px 1px rgb(71, 71, 71);*/
-    left: 7px;
-    opacity: 1;
-}
-/*
-.referido:hover p{
-    text-decoration: underline;
-}*/
-
-.referido>p::before{
-    content: ">> ";
-}
-
-.referido>ul{
-    margin-bottom: 40px;
-}
-.referido>p{
-    font-weight: bold;
-}
-
-
-
-
-
-:root {
-  --color-dark:  #323232;
-  --color-snow: #ffffff;
-  --color-smoke: #ffffff;
-  --borderRadius: 36px;
-  /*color: #323233*/
-}
-
-/*********************************************/
-.button {
-    margin: 10px;
-    padding: 12px 12px;
-  
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    white-space: nowrap;
-
-    border: 0 none;
-    border-radius: var(--borderRadius);
-
-    font-size: 1rem;
-    line-height: 1.3;
-    transition: 0.5s;
-    -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none;
-    box-shadow: 0px 1px 2px var(--color-smoke);
-}  
-
-.button.-dark {
-    color: var(--color-snow);
-    background: var(--color-dark);
-  }
-
-.button:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 2px 6px var(--color-smoke);
-}
-a{
-    text-decoration: none;
-}
-
-
-
-
-@keyframes tracking-in-expand-fwd-top {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-transform: translateZ(-700px) translateY(-500px);
-              transform: translateZ(-700px) translateY(-500px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      -webkit-transform: translateZ(0) translateY(0);
-              transform: translateZ(0) translateY(0);
-      opacity: 1;
-    }
-  }
-
-
-  .nombre{
-      animation-name: tracking-in-expand-fwd-top;
-      animation-duration: 1.5s;
-  }
-
-
-
-@media screen and (max-width: 768px){
-    body{
-        column-gap: 0px;
-        grid-template-columns: 40% 60%;
-        grid-template-areas:'foto nombre'
-                        'foto nombre'
-                        'resumen resumen'
-                        'aptitudes aptitudes'
-                        'historial-personal historial-personal'
-                        'historial-academico historial-academico'
-                        'contacto contacto'
-                        'referido referido'
-    }
-    /*.foto{
-        width: 400px;
-        height: 350px;
-        object-position:bottom;
-    }*/
-    .nombre{
-        background-color: #e46a3a;
-        color: #fff;
-        padding-left:15px ;
-    }
-    h1{
-        font-size: 2.5rem;
-        padding: 15px 0;
-    }
-    .nombre>p{
-        font-size: 1.5rem;
-    }
-    section{
-        padding: 0 15px;
-    }
-    section.foto,section.nombre{
-        padding: 0;
-    }
-    .foto{
-        padding-left: 0px;
-    }
-    .referido {
-        padding: 50px 15px;
-        margin-top: 0px;
-    }
-    .contacto{
-        padding: 0 15px;
-    }
-    h2{
-        font-size: 1.5rem;
-    }
-}
+        <div class='button -dark center'><a href="/carta.html" target="_blank">Carta de Presentacion</a></div>
+    </section>
+</body>
+</html>
