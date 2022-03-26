@@ -10,6 +10,7 @@ body{
                         'foto resumen aptitudes'
                         'contacto historial-personal historial-personal'
                         'referido historial-academico historial-academico'
+                        'referido extensivo extensivo'
 }
 :root{
     font-size: 18px;
@@ -40,6 +41,9 @@ body{
 }
 .referido{
     grid-area: referido;
+}
+.extensivo{
+    grid-area: extensivo;
 }
 
 /*********************/
