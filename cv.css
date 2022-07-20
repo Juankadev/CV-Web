@@ -48,7 +48,7 @@ body{
 
 /*********************/
 body>*{
-    border: 0px solid #000;
+    border: 0px solid #fff;
     color: #e46a3a;
 }
 .foto{
@@ -95,7 +95,7 @@ img:hover{
 }
 
 section.contacto, section.referido{
-    color: #000;
+    color: #fff;
     background-color: #e46a3a;
 }
 
@@ -148,7 +148,7 @@ h2{
     margin-top: -200px;
 }
 a{
-    color: #000;
+    color: #fff;
 }
 
 /************************************/
@@ -318,7 +318,7 @@ a{
     }*/
     .nombre{
         background-color: #e46a3a;
-        color: #000;
+        color: #fff;
         padding-left:15px ;
     }
     h1{
