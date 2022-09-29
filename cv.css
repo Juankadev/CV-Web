@@ -78,6 +78,17 @@ img:hover{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h2{
+  text-decoration: underline;
+}
+
+section.contacto h2{
+    color:white;
+}
+section.referido h2{
+    color:white;
+}
+
 .nombre {
     font-size: 2rem;
 }
