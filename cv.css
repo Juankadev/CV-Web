@@ -53,11 +53,14 @@ body>*{
 }
 .foto{
     overflow: hidden;
+    background-color: #e46a3a;
+    border-radius: 0 15px 0 0;
 }
 section.foto>img{
-    height: 100%;
+    margin-top: 40px;
+    height: 50%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     box-sizing: border-box;
     transition: 1s;
 }
@@ -65,7 +68,7 @@ section.foto>img:hover{
     /*border: 8px double #000;*/
 }
 img:hover{
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 
